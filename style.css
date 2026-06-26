@@ -1,0 +1,62 @@
+*,html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    height: 100vh;
+}
+
+/* NAVIGATION BAR */
+
+.ul-navbar {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.li-navbar {
+    list-style-type: none;
+    background-color: #2563EB;
+    color: antiquewhite;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+}
+.li-navbar:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.a-navbar {
+    text-decoration: none;
+    color: antiquewhite;
+}
+/* CONTENT */
+
+.content {
+    height: 80vh;
+    background-color:gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img-logorumahjuara {
+    width: 100%;
+    height: 100%;
+}
+
+/* FOOTER */
+
+.footer{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.closestat{
+    color: #1E293B;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
