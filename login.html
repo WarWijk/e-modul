@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Modul Aljabar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+    integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="cont">
+
+    <!-- Bagian Login -->
+
+    <div class="cont-kecil">
+      <!-- Login Form -->
+      <div class="form-cont active" id="login-form">
+        <form id="form-login" action="">
+          <h2>Masuk</h2>
+          <input type="email" name="email" placeholder="E-mail" required />
+          <input type="password" name="password" placeholder="Sandi" required minlength="8"/>
+          <button type="submit" name="login">Masuk</button>
+          <p>Belum pernah daftar? <a href="#" onclick="gantiForm('register-form'); return false">Daftar</a></p>
+        </form>
+      </div>
+      <!-- Register Form -->
+      <div class="form-cont" id="register-form">
+        <form id="form-register" action="">
+          <h2>Daftar</h2>
+          <input type="text" name="nama" placeholder="Nama" required />
+          <input type="text" name="kelas" placeholder="Kelas" required />
+          <input type="email" name="email" placeholder="E-Mail" required />
+          <input type="password" name="password" placeholder="Sandi" required minlength="8"/>
+          <button type="submit" name="login">Daftar</button>
+          <p>Sudah pernah daftar? <a href="#" onclick="gantiForm('login-form'); return false">Masuk</a></p>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bagian Script -->
+
+  <script src="https://kit.fontawesome.com/2994ae93a9.js" crossorigin="anonymous"></script>
+  <script src="js/script.js" defer></script>
+  <script type="module" src="js/logres.js" defer></script>
+</body>
+
+</html>

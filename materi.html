@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materi Bentuk Aljabar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+    integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="auth-pending">
+  <div class="cont">
+    <nav id="navbar">
+      <ul>
+        <li>
+          <button id="close-sidebar-btn" onclick="closeSidebar()" aria-label="Tutup menu">
+            <i class="fa-solid fa-x"></i>
+          </button>
+        </li>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="mailto:dimasaw570@gmail.com">Kontak</a></li>
+        <li class="logout-li"><a id="logout-btn" href="#">Keluar</a></li>
+      </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+    <button id="open-sidebar-btn" onclick="openSidebar()" aria-label="Buka menu" aria-expanded="false"
+      aria-controls="navbar">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <header class="materi-heading">
+      <h1>Materi Bentuk Aljabar</h1>
+      <p>Pilih submateri untuk mulai belajar. Materi disusun berurutan dari pengenalan konsep hingga pemodelan.</p>
+    </header>
+
+    <main class="materi-cont" aria-label="Pilihan submateri">
+      <a class="card-materi" href="peta-konsep.html">
+        <span class="card-number">01</span>
+        <h2>Peta Konsep</h2>
+        <p>Lihat gambaran hubungan antar konsep dalam bentuk aljabar.</p>
+        <span class="card-link">Buka materi <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a class="card-materi" href="mengenal-bentuk-aljabar.html">
+        <span class="card-number">02</span>
+        <h2>Mengenal Bentuk Aljabar</h2>
+        <p>Kenali variabel, koefisien, konstanta, dan suku.</p>
+        <span class="card-link">Buka materi <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a class="card-materi" href="operasi-hitung-aljabar-1.html">
+        <span class="card-number">03</span>
+        <h2>Operasi Hitung Aljabar 1</h2>
+        <p>Pelajari penjumlahan dan pengurangan bentuk aljabar.</p>
+        <span class="card-link">Buka materi <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a class="card-materi" href="operasi-hitung-aljabar-2.html">
+        <span class="card-number">04</span>
+        <h2>Operasi Hitung Aljabar 2</h2>
+        <p>Pelajari perkalian dan pembagian bentuk aljabar.</p>
+        <span class="card-link">Buka materi <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a class="card-materi" href="pemodelan-bentuk-aljabar.html">
+        <span class="card-number">05</span>
+        <h2>Pemodelan Bentuk Aljabar</h2>
+        <p>Ubah situasi sehari-hari menjadi ekspresi aljabar.</p>
+        <span class="card-link">Buka materi <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    </main>
+  </div>
+
+  <script src="https://kit.fontawesome.com/2994ae93a9.js" crossorigin="anonymous"></script>
+  <script type="module" src="js/auth-guard.js"></script>
+  <script type="module" src="js/logres.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>

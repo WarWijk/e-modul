@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mengenal Bentuk Aljabar | Materi Bentuk Aljabar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="auth-pending">
+  <div class="cont">
+    <nav id="navbar">
+      <ul>
+        <li><button id="close-sidebar-btn" onclick="closeSidebar()" aria-label="Tutup menu">&times;</button></li>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="mailto:dimasaw570@gmail.com">Kontak</a></li>
+        <li class="logout-li"><a id="logout-btn" href="#">Keluar</a></li>
+      </ul>
+    </nav>
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+    <button id="open-sidebar-btn" onclick="openSidebar()" aria-label="Buka menu" aria-expanded="false"
+      aria-controls="navbar"><i class="fa-solid fa-bars"></i></button>
+
+    <main class="lesson-page">
+      <a class="lesson-back" href="materi.html">&larr; Semua Submateri</a>
+      <h1>Mengenal Bentuk Aljabar</h1>
+      <p class="lesson-intro">Bentuk aljabar menggunakan huruf untuk mewakili bilangan yang nilainya dapat diketahui
+        atau berubah.</p>
+
+      <section class="lesson-content">
+        <h2>Tujuan Pembelajaran</h2>
+        <ul>
+          <li>Memahami bentuk aljabar dan unsur-unsurnya.</li>
+          <li>Membedakan variabel, koefisien, konstanta, dan suku.</li>
+        </ul>
+
+        <h2>Unsur-Unsur Bentuk Aljabar</h2>
+        <div class="lesson-example">
+          Pada ekspresi <strong>3x + 5</strong>, <strong>x</strong> disebut variabel,
+          <strong>3</strong> adalah koefisien, <strong>5</strong> adalah konstanta,
+          dan <strong>3x</strong> serta <strong>5</strong> adalah suku.
+        </div>
+        <ul>
+          <li><strong>Variabel:</strong> lambang berupa huruf untuk mewakili nilai, misalnya <em>x</em>.</li>
+          <li><strong>Koefisien:</strong> bilangan yang mengalikan variabel, misalnya 3 pada <em>3x</em>.</li>
+          <li><strong>Konstanta:</strong> bilangan tanpa variabel, misalnya 5 pada <em>3x + 5</em>.</li>
+          <li><strong>Suku:</strong> bagian ekspresi yang dipisahkan oleh tanda tambah atau kurang.</li>
+        </ul>
+
+        <div class="game-launch-card">
+          <h2>Ayo Bermain</h2>
+          <p>Geser setiap kartu ke slot dengan pasangan yang sesuai.</p>
+          <button class="game-launch" type="button" data-open-game="game-1">Mulai game</button>
+        </div>
+
+        <div class="game-cont" id="game-1" role="dialog" aria-modal="true" aria-labelledby="game-1-title" hidden>
+          <div class="game-dialog">
+            <button class="game-close" type="button" aria-label="Tutup game">&times;</button>
+            <div class="game-title">
+              <h2 id="game-1-title">Pasangkan Unsur Aljabar</h2>
+              <p>Geser setiap kartu ke slot dengan pengertian yang sesuai.</p>
+            </div>
+            <div class="game-session">
+              <button class="resetBtn" type="button" data-action="reset">Ulangi</button>
+              <div class="card-tray">
+                <div class="dndCard draggable" id="variabel-card" data-match="variabel">Variabel</div>
+                <div class="dndCard draggable" id="konstanta-card" data-match="konstanta">Konstanta</div>
+                <div class="dndCard draggable" id="suku-card" data-match="suku">Suku</div>
+                <div class="dndCard draggable" id="koefisien-card" data-match="koefisien">Koefisien</div>
+              </div>
+            </div>
+            <div class="game-question">
+              <div class="game-answer">
+                <div class="answer-box" id="suku-slot" data-match="suku"></div>
+                <p>Bagian bentuk aljabar yang dipisahkan oleh operasi tambah atau kurang.</p>
+              </div>
+              <div class="game-answer">
+                <div class="answer-box" id="variabel-slot" data-match="variabel"></div>
+                <p>Lambang untuk mewakili bilangan atau nilai yang belum diketahui.</p>
+              </div>
+              <div class="game-answer">
+                <div class="answer-box" id="konstanta-slot" data-match="konstanta"></div>
+                <p>Unsur berbentuk bilangan dan tidak memiliki variabel.</p>
+              </div>
+              <div class="game-answer">
+                <div class="answer-box" id="koefisien-slot" data-match="koefisien"></div>
+                <p>Bilangan yang mengalikan variabel pada suatu suku.</p>
+              </div>
+              <p class="game-result" aria-live="polite"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <script src="https://kit.fontawesome.com/2994ae93a9.js" crossorigin="anonymous"></script>
+  <script type="module" src="js/auth-guard.js"></script>
+  <script type="module" src="js/logres.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>

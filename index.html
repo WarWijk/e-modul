@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Modul Bentuk Aljabar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+    integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<!-- Nyari icon bisa di key -->
+
+<body class="auth-pending">
+  <div class="cont">
+    <!-- Navigation Bar -->
+
+    <nav id="navbar">
+      <ul>
+        <li>
+          <button id="close-sidebar-btn" onclick="closeSidebar()" aria-label="close sidebar">
+            <i class="fa-solid fa-x"></i>
+          </button>
+        </li>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="mailto:dimasaw570@gmail.com">Kontak</a></li>
+        <li class="logout-li"><a id="logout-btn" href="#">Keluar</a></li>
+      </ul>
+    </nav>
+
+    <!-- Overlay untuk close sidebar -->
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+    <!-- ARIA atau (Accessible Rich Internet Applications), berguna untuk membantu teknologi seperti screen reader memahami antarmuka web. fungsi (aria-hidden="true") adalah agar div dengan id overlay diabaikan oleh teknologi tersebut -->
+    <button id="open-sidebar-btn" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+      aria-controls="navbar">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Welcoming Content -->
+
+    <div class="intro-cont">
+      <div class="intro-txt">
+        <h1>Halo! Selamat Datang <p id="user-name">Pengguna</p></h1>
+        <h2>Belajar Aljabar Jadi Lebih Mudah</h2>
+        <p>
+          Website ini adalah e-modul interaktif berbasis guided discovery
+          learning untuk membantu kamu menemukan konsep aljabar secara mandiri
+          dan menyenangkan
+        </p>
+        <div class="cp">
+          <h2>
+            Capaian Pembelajaran
+          </h2>
+          <p>
+            Di akhir Fase D, peserta didik mampu mengidentifikasi
+            karakteristik pola, melakukan ekstrapolasi untuk memprediksi
+            suku berikutnya, dan menyusun generalisasi pola bilangan
+            maupun susunan objek konkrit. Mereka terampil mentranslasikan
+            situasi dunia nyata ke dalam ekspresi aljabar formal dan
+            memanipulasinya menggunakan sifat-sifat operasi (komutatif,
+            asosiatif, distributif) untuk menghasilkan bentuk ekuivalen.
+          </p>
+        </div>
+      </div>
+      <img class="intro-img" src="assets/gambar/intro aljabar.png" />
+    </div>
+
+    <!-- Menu pembelajaran -->
+
+    <div class="wrapper">
+      <!-- Card Materi -->
+      <div class="card text-center">
+        <div class="bg-title">
+          <h1 class="card-title">materi</h1>
+        </div>
+        <i class="icon info fa-solid fa-book"></i>
+        <p class="card-desc">
+          Pelajari konsep aljabar secara runtut dan interaktif sekarang!
+        </p>
+        <a href="materi.html" class="btn card-btn">Ayo Belajar!</a>
+      </div>
+
+      <!-- Card Latihan -->
+      <div class="card text-center">
+        <div class="bg-title">
+          <h1 class="card-title">latihan</h1>
+        </div>
+        <i class="icon success fa-solid fa-pen-to-square"></i>
+        <p class="card-desc">Kerjakan latihan untuk mengasah pemahamanmu</p>
+        <a href="#" class="btn card-btn">Ayo Berlatih!</a>
+      </div>
+
+      <!-- Card Evaluasi -->
+      <div class="card text-center">
+        <div class="bg-title">
+          <h1 class="card-title">evaluasi</h1>
+        </div>
+        <i class="icon warning fa-solid fa-scroll"></i>
+        <p class="card-desc">Uji kemampuanmu dan lihat hasilnya langsung</p>
+        <a href="#" class="btn card-btn">Ayo Kerjakan!</a>
+      </div>
+
+      <!-- Card Petunjuk -->
+      <div class="card text-center">
+        <div class="bg-title">
+          <h1 class="card-title">petunjuk</h1>
+        </div>
+        <i class="icon else fa-solid fa-magnifying-glass"></i>
+        <p class="card-desc">
+          Buka disini untuk melihat cara menggunakan website.
+        </p>
+        <a href="#" class="btn card-btn">Ayo Simak!</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bagian Script -->
+
+  <script src="https://kit.fontawesome.com/2994ae93a9.js" crossorigin="anonymous"></script>
+  <script type="module" src="js/auth-guard.js"></script>
+  <script type="module" src="js/logres.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>

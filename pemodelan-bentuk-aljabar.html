@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pemodelan Bentuk Aljabar | Materi Bentuk Aljabar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="auth-pending">
+  <div class="cont">
+    <nav id="navbar">
+      <ul>
+        <li><button id="close-sidebar-btn" onclick="closeSidebar()" aria-label="Tutup menu">&times;</button></li>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="mailto:dimasaw570@gmail.com">Kontak</a></li>
+        <li class="logout-li"><a id="logout-btn" href="#">Keluar</a></li>
+      </ul>
+    </nav>
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+    <button id="open-sidebar-btn" onclick="openSidebar()" aria-label="Buka menu" aria-expanded="false"
+      aria-controls="navbar"><i class="fa-solid fa-bars"></i></button>
+
+    <main class="lesson-page">
+      <a class="lesson-back" href="materi.html">&larr; Semua Submateri</a>
+      <h1>Pemodelan Bentuk Aljabar</h1>
+      <p class="lesson-intro">Pemodelan aljabar membantu menyatakan informasi dan hubungan dalam suatu masalah dengan
+        simbol matematika.</p>
+
+      <section class="lesson-content">
+        <h2>Langkah Membuat Model</h2>
+        <ol>
+          <li>Tentukan besaran yang belum diketahui.</li>
+          <li>Nyatakan besaran itu dengan sebuah variabel.</li>
+          <li>Terjemahkan informasi pada soal menjadi operasi dan ekspresi aljabar.</li>
+          <li>Periksa apakah model sesuai dengan hubungan dalam soal.</li>
+        </ol>
+
+        <h2>Contoh 1: Harga Barang</h2>
+        <p>Harga sebuah buku adalah <em>x</em> rupiah. Harga sebuah pensil Rp2.000 lebih mahal daripada buku.</p>
+        <div class="lesson-example">
+          Harga pensil = <strong>x + 2.000</strong> rupiah.
+        </div>
+
+        <h2>Contoh 2: Keliling Persegi Panjang</h2>
+        <p>Panjang sebuah persegi panjang adalah <em>p</em> cm dan lebarnya <em>l</em> cm.</p>
+        <div class="lesson-example">
+          Keliling = 2 &times; (panjang + lebar) = <strong>2(p + l)</strong> cm.
+        </div>
+
+        <h2>Ingat</h2>
+        <p>Variabel mewakili nilai yang belum diketahui. Tuliskan satuan jika besaran pada soal memiliki satuan.</p>
+      </section>
+
+    </main>
+  </div>
+  <script src="https://kit.fontawesome.com/2994ae93a9.js" crossorigin="anonymous"></script>
+  <script type="module" src="js/auth-guard.js"></script>
+  <script type="module" src="js/logres.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>

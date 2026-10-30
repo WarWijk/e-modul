@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operasi Hitung Aljabar 1 | Materi Bentuk Aljabar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="auth-pending">
+  <div class="cont">
+    <nav id="navbar">
+      <ul>
+        <li><button id="close-sidebar-btn" onclick="closeSidebar()" aria-label="Tutup menu">&times;</button></li>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="mailto:dimasaw570@gmail.com">Kontak</a></li>
+        <li class="logout-li"><a id="logout-btn" href="#">Keluar</a></li>
+      </ul>
+    </nav>
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+    <button id="open-sidebar-btn" onclick="openSidebar()" aria-label="Buka menu" aria-expanded="false"
+      aria-controls="navbar"><i class="fa-solid fa-bars"></i></button>
+
+    <main class="lesson-page">
+      <a class="lesson-back" href="materi.html">&larr; Semua Submateri</a>
+      <h1>Operasi Hitung Aljabar 1</h1>
+      <p class="lesson-intro">Penjumlahan dan pengurangan dapat dilakukan pada suku-suku sejenis.</p>
+
+      <section class="lesson-content">
+        <h2>Suku Sejenis</h2>
+        <p>Suku sejenis memiliki variabel dan pangkat variabel yang sama. Koefisiennya dapat dijumlahkan atau
+          dikurangkan, sedangkan variabelnya tetap.</p>
+        <div class="lesson-example">
+          <strong>Contoh penjumlahan:</strong><br />
+          3x + 2x = (3 + 2)x = <strong>5x</strong>
+        </div>
+        <div class="lesson-example">
+          <strong>Contoh pengurangan:</strong><br />
+          7a - 4a = (7 - 4)a = <strong>3a</strong>
+        </div>
+
+        <h2>Suku Tidak Sejenis</h2>
+        <p>Suku yang variabel atau pangkatnya berbeda tidak dapat digabungkan menjadi satu suku.</p>
+        <div class="lesson-example">
+          3x + 2y tetap <strong>3x + 2y</strong>, karena variabelnya berbeda.
+        </div>
+
+        <h2>Contoh Gabungan</h2>
+        <p>Sederhanakan <strong>4x + 3 + 2x - 1</strong>.</p>
+        <ol>
+          <li>Kelompokkan suku sejenis: (4x + 2x) + (3 - 1).</li>
+          <li>Hitung koefisien dan konstantanya: 6x + 2.</li>
+        </ol>
+      </section>
+
+    </main>
+  </div>
+  <script src="https://kit.fontawesome.com/2994ae93a9.js" crossorigin="anonymous"></script>
+  <script type="module" src="js/auth-guard.js"></script>
+  <script type="module" src="js/logres.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>

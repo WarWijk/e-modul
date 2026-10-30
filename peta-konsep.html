@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peta Konsep | Materi Bentuk Aljabar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="auth-pending">
+  <div class="cont">
+    <nav id="navbar">
+      <ul>
+        <li><button id="close-sidebar-btn" onclick="closeSidebar()" aria-label="Tutup menu">&times;</button></li>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="mailto:dimasaw570@gmail.com">Kontak</a></li>
+        <li class="logout-li"><a id="logout-btn" href="#">Keluar</a></li>
+      </ul>
+    </nav>
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+    <button id="open-sidebar-btn" onclick="openSidebar()" aria-label="Buka menu" aria-expanded="false"
+      aria-controls="navbar"><i class="fa-solid fa-bars"></i></button>
+
+    <main class="lesson-page">
+      <a class="lesson-back" href="materi.html">&larr; Semua Submateri</a>
+      <h1>Peta Konsep Bentuk Aljabar</h1>
+      <p class="lesson-intro">Peta konsep ini menunjukkan bagaimana unsur dan operasi aljabar saling berhubungan.</p>
+
+      <section class="lesson-content">
+        <h2>Gambaran Umum</h2>
+        <div class="concept-map">
+          <article class="concept-node">
+            <h3>Bentuk Aljabar</h3>
+            <p>Ekspresi matematika yang memuat bilangan, variabel, dan operasi.</p>
+          </article>
+          <article class="concept-node">
+            <h3>Unsur Aljabar</h3>
+            <p>Variabel, koefisien, konstanta, dan suku membentuk suatu ekspresi aljabar.</p>
+          </article>
+          <article class="concept-node">
+            <h3>Operasi Hitung</h3>
+            <p>Penjumlahan, pengurangan, perkalian, dan pembagian mengikuti sifat operasi.</p>
+          </article>
+          <article class="concept-node">
+            <h3>Pemodelan</h3>
+            <p>Informasi dari situasi sehari-hari dapat dinyatakan dengan variabel dan operasi aljabar.</p>
+          </article>
+        </div>
+        <div class="lesson-example">
+          <strong>Contoh hubungan konsep:</strong> pada <strong>3x + 5</strong>, variabelnya adalah <strong>x</strong>,
+          koefisiennya <strong>3</strong>, konstantanya <strong>5</strong>, dan sukunya <strong>3x</strong> serta
+          <strong>5</strong>.
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <script src="https://kit.fontawesome.com/2994ae93a9.js" crossorigin="anonymous"></script>
+  <script type="module" src="js/auth-guard.js"></script>
+  <script type="module" src="js/logres.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,935 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  font-family: inherit;
+  line-height: normal;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+body.auth-pending {
+  visibility: hidden;
+}
+
+.silkscreen-r {
+  font-family: inherit;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.silkscreen-b {
+  font-family: inherit;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+}
+
+/* ini buat bikin color pallete yang biasa dipake buat design */
+:root {
+  --bg-main: #1A2238;
+  --bg-primary: #475569;
+  --bg-secondary: #F8FAFC;
+  --bg-tipis-prim: #DBEAFE;
+  --bg-tipis-sec: #D1FAE5;
+  --btn-primary: #2563EB;
+  --txt-primary: #1E293B;
+  --txt-secondary: #94A3B8;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --info: #3B82F6;
+  --else: #9F69DC;
+}
+
+.success {
+  color: #10B981;
+}
+
+.warning {
+  color: #F59E0B;
+}
+
+.error {
+  color: #EF4444;
+}
+
+.info {
+  color: #3B82F6;
+}
+
+.else {
+  color: #9F69DC;
+}
+
+.white {
+  color: #F8FAFC;
+}
+
+.cont {
+  background-color: var(--bg-tipis-prim);
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  position: relative;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 10px;
+}
+
+/* Login Page */
+
+.cont-kecil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.form-cont {
+  width: 100%;
+  max-width: 450px;
+  background-color: white;
+  margin: 0 15px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+  display: none;
+}
+
+.form-cont h2 {
+  font-size: 34px;
+  text-align: center;
+}
+
+.form-cont input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+}
+
+.form-cont button {
+  width: 100%;
+  background-color: var(--info);
+  color: #DBEAFE;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.form-cont button:hover {
+  background-color: #1D4ED8;
+}
+
+.form-cont p {
+  text-align: center;
+}
+
+.form-cont a:hover {
+  text-decoration: underline;
+}
+
+.form-cont.active {
+  display: block;
+}
+
+/* Bagian Header */
+
+nav {
+  background-color: var(--bg-main);
+  color: var(--txt-secondary);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a {
+  color: var(--bg-secondary);
+  text-decoration: none;
+  display: inline-block;
+  margin: 1px;
+  padding: 10px;
+  transition: all .3s ease;
+}
+
+nav .logout-li {
+  background-color: var(--btn-primary);
+  margin-left: auto;
+}
+
+nav a:hover {
+  color: var(--txt-secondary);
+  transform: rotate(3deg);
+}
+
+#open-sidebar-btn {
+  color: var(--bg-main);
+  font-size: 20px;
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#close-sidebar-btn {
+  font-size: 20px;
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#overlay {
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  display: none;
+}
+
+/* Bagian Intro */
+
+.intro-cont {
+  color: var(--bg-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.intro-txt {
+  max-width: 50%;
+}
+
+.cp {
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--bg-main);
+  border-radius: 10px;
+  text-align: justify;
+  padding: 0 10px;
+  box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, .5);
+}
+
+.intro-txt h1 {
+  color: var(--btn-primary);
+  font-weight: 800;
+}
+
+.intro-txt h2 {
+  font-weight: 700;
+}
+
+.intro-txt p {
+  margin-bottom: 10px;
+}
+
+.intro-img {
+  max-width: 25%;
+  height: auto;
+  margin: 10px;
+}
+
+/* Bagian Cards */
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 16px;
+  padding: 16px 16px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: var(--bg-secondary);
+  color: var(--txt-primary);
+  border: 2px solid var(--bg-main);
+  border-radius: 5px;
+  width: 220px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 5px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, .5);
+  transition: all .3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card a {
+  color: var(--bg-main);
+  font-size: 14px;
+}
+
+.bg-title {
+  color: var(--txt-primary);
+  border-radius: 5px;
+  width: 95%;
+}
+
+.card-title {
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.icon {
+  margin: 15px 0;
+  padding: 15px 0;
+  width: 90%;
+  font-size: 50px;
+  border: 2px solid var(--bg-main);
+  border-radius: 10px;
+}
+
+.card-desc {
+  font-size: 1em;
+  text-align: left;
+  margin: 0 5px;
+}
+
+.btn {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--btn-primary);
+  transition: .3s ease-in-out;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+.card-btn {
+  margin-top: auto;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(110%);
+}
+
+.text-center {
+  text-align: center;
+  align-items: center;
+}
+
+/* Bagian About */
+
+.par-cont {
+  height: 25dvh;
+  display: flex;
+  align-items: center;
+}
+
+.par-cont h1 {
+  color: var(--bg-main);
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+  width: 100%;
+}
+
+.about-cont {
+  color: var(--bg-main);
+  padding: 20px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.about-img {
+  max-width: 25%;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.about-desc {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  box-sizing: border-box;
+}
+
+.about-desc h1 {
+  color: var(--btn-primary);
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.about-desc h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.about-sosmed {
+  color: var(--bg-main);
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  gap: 10px;
+}
+
+.about-cont-2 {
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.about-bio {
+  color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 25%;
+  padding: 10px;
+  gap: 10px;
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-bio h1 {
+  color: var(--btn-primary);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.about-bio p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.quote-cont {
+  color: var(--bg-main);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 75%;
+  padding: 20px;
+}
+
+/* Bagian Materi */
+
+.materi-cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 18px;
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 28px 20px 40px;
+}
+
+.card-materi {
+  border: 2px solid var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 190px;
+  padding: 22px;
+  border-radius: 10px;
+  color: var(--txt-primary);
+  background-color: var(--bg-secondary);
+  box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, .5);
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.card-materi:hover {
+  border-color: var(--btn-primary);
+  transform: translateY(-3px);
+}
+
+.card-materi:focus-visible,
+.lesson-back:focus-visible,
+.lesson-back:focus-visible {
+  outline: 3px solid var(--info);
+  outline-offset: 3px;
+}
+
+.materi-heading,
+.lesson-page {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.materi-heading {
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.materi-heading p,
+.lesson-intro {
+  color: #475569;
+  line-height: 1.65;
+}
+
+.card-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-color: var(--bg-tipis-prim);
+  color: var(--btn-primary);
+  font-weight: 700;
+}
+
+.card-materi h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.card-materi p {
+  color: #475569;
+  line-height: 1.5;
+}
+
+.card-link {
+  display: inline-flex;
+  gap: 8px;
+  margin-top: 20px;
+  color: var(--btn-primary);
+  font-weight: 700;
+}
+
+.highlight {
+  box-shadow: -5px 0px 0px 0px var(--success);
+  border-radius: 10px;
+  padding-left: 10px;
+  margin: 10px;
+}
+
+.card-materi h1 {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+.section {
+  background-color: var(--bg-secondary);
+  display: none;
+  padding: 20px;
+}
+
+.section.active {
+  display: block;
+}
+
+.lesson-back {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--btn-primary);
+  font-weight: 700;
+}
+
+.lesson-page h1 {
+  margin-bottom: 12px;
+  color: var(--bg-main);
+}
+
+.lesson-content {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 10px;
+  background-color: var(--bg-secondary);
+  line-height: 1.7;
+}
+
+.lesson-content h2,
+.lesson-content h3 {
+  margin: 20px 0 10px;
+}
+
+.lesson-content h2:first-child,
+.lesson-content h3:first-child {
+  margin-top: 0;
+}
+
+.lesson-content ul,
+.lesson-content ol {
+  padding-left: 24px;
+}
+
+.lesson-content li+li {
+  margin-top: 6px;
+}
+
+.lesson-example {
+  margin: 16px 0;
+  padding: 16px;
+  border-left: 4px solid var(--success);
+  border-radius: 6px;
+  background-color: var(--bg-tipis-sec);
+}
+
+.concept-map {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.concept-node {
+  padding: 18px;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  background-color: #eff6ff;
+}
+
+/* Bagian Drag and Drop */
+
+.game-launch-card {
+  margin: 24px 0;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--bg-secondary);
+}
+
+.game-title {
+  margin-bottom: 20px;
+}
+
+.game-launch {
+  background-color: var(--btn-primary);
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.game-session {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.card-tray {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+.dndCard {
+  position: relative;
+  background-color: #afda9f;
+  border-radius: 5px;
+  width: 100%;
+  min-height: 40px;
+  text-align: center;
+  align-content: center;
+  display: none;
+  padding: 8px;
+}
+
+.game-cont[hidden] {
+  display: none;
+}
+
+.game-cont {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: rgb(0 0 0 / 60%);
+}
+
+.game-dialog {
+  position: relative;
+  width: min(100%, 760px);
+  max-height: 90dvh;
+  overflow-y: auto;
+  padding: 24px;
+  border-radius: 10px;
+  background-color: var(--bg-secondary);
+  box-shadow: 0 12px 40px rgb(0 0 0 / 30%);
+}
+
+.game-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--txt-primary);
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.game-close:hover {
+  background-color: rgb(30 41 59 / 10%);
+}
+
+body.game-open {
+  overflow: hidden;
+}
+
+.game-question {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.game-answer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.answer-box {
+  background-color: #475569;
+  flex: 0 0 100px;
+  width: 100px;
+  min-height: 40px;
+  border-radius: 5px;
+}
+
+.answer-box .dndCard {
+  position: static;
+  display: block;
+  width: 100%;
+}
+
+.game-result {
+  min-height: 1.5em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.game-result.is-success {
+  color: var(--success);
+  font-size: 1.2rem;
+}
+
+.dndCard.active {
+  display: block;
+}
+
+.draggable {
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.resetBtn {
+  background-color: white;
+  color: #1A2238;
+  border: 2px solid var(--btn-primary);
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .game-cont {
+    padding: 12px;
+  }
+
+  .game-dialog {
+    max-height: 94dvh;
+    padding: 18px;
+    padding-top: 56px;
+  }
+
+  .card-tray {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .game-answer {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .lesson-page {
+    padding: 24px 16px;
+  }
+
+  .lesson-content {
+    padding: 18px;
+  }
+
+}
+
+/* Layar lebih kecil dari 900px */
+
+@media (max-width:900px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+  }
+
+  .card {
+    width: 100%;
+    transition: none;
+  }
+
+  .card:hover {
+    width: 100%;
+  }
+
+  .btn {
+    transition: none;
+  }
+}
+
+/* Layar lebih kecil dari 600px */
+
+@media (max-width:600px) {
+
+  #open-sidebar-btn,
+  #close-sidebar-btn {
+    display: block;
+  }
+
+  .container {
+    text-align: justify;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: min(15em, 100%);
+    z-index: 10;
+    border-left: 1px solid var(--txt-secondary);
+    transition: right .3s ease-in-out;
+  }
+
+  nav.show {
+    right: 0;
+  }
+
+  nav.show~#overlay {
+    display: block;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  nav a {
+    width: 100%;
+  }
+
+  nav .logout-li {
+    margin-left: unset;
+  }
+
+  .intro-cont {
+    flex-direction: column;
+  }
+
+  .intro-txt {
+    max-width: 90%;
+  }
+
+  #open-sidebar-btn {
+    order: -2;
+  }
+
+  .intro-img {
+    max-width: 90%;
+    order: -1;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .card {
+    width: 75%;
+    transition: none;
+  }
+
+  .card:hover {
+    width: 75%;
+  }
+
+  .btn {
+    transition: none;
+  }
+
+  .materi-cont {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-top: 50px;
+  }
+}

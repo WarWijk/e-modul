@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Modul Aljabar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+    integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="auth-pending">
+  <div class="cont">
+    <!-- Navigation Bar -->
+
+    <nav id="navbar">
+      <ul>
+        <li>
+          <button id="close-sidebar-btn" onclick="closeSidebar()" aria-label="close sidebar">
+            <i class="fa-solid fa-x"></i>
+          </button>
+        </li>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="mailto:dimasaw570@gmail.com">Kontak</a></li>
+        <li class="logout-li"><a id="logout-btn" href="#">Keluar</a></li>
+      </ul>
+    </nav>
+
+    <!-- Tombol Navigasi HP -->
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+    <button id="open-sidebar-btn" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+      aria-controls="navbar">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Parallax About Us -->
+
+    <div class="par-cont">
+      <h1>Tentang Saya</h1>
+    </div>
+
+    <!-- Data Diri -->
+
+    <div class="about-cont">
+
+      <img class="about-img" src="assets/foto/dhimas_luhur.jpeg" />
+
+      <div class="about-desc">
+        <h1>Halo! Saya Dhimas Anwar Wijaya</h1>
+        <h2>Mahasiswa Pendidikan Matematika</h2>
+        <p>
+          Saya adalah mahasiswa Universitas Negeri Jakarta dengan ketertarikan di bidang pendidikan, teknologi, dan
+          pengembangan media pembelajaran. Melalui E-Modul ini, saya berusaha menghadirkan pembelajaran matematika yang
+          lebih interaktif, menyenangkan, dan mudah dipahami, khususnya pada materi aljabar untuk kelas VII SMP.
+        </p>
+        <div class="about-sosmed">
+          <p>Ikuti saya :</p>
+          <a href="https://www.instagram.com/dhimaswjy/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram" style="color: var(--bg-main);"></i>
+          </a>
+          <a href="https://www.youtube.com/@JayyyChannel" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-youtube" style="color: var(--bg-main);"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quotes -->
+
+    <div class="about-cont-2">
+
+      <div class="about-bio">
+        <div class="bio">
+          <i class="fa-solid fa-user"></i>
+          <div>
+            <h1>Nama Lengkap</h1>
+            <p>Dhimas Anwar Wijaya</p>
+          </div>
+        </div>
+        <div class="bio">
+          <i class="fa-solid fa-calendar"></i>
+          <div>
+            <h1>Tempat, Tanggal Lahir</h1>
+            <p>Jakarta, 27 November 2002</p>
+          </div>
+        </div>
+        <div class="bio">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <div>
+            <h1>Pendidikan</h1>
+            <p>
+              S1 Pendidikan Matematika<br>
+              Universitas Negeri Jakarta
+            </p>
+          </div>
+        </div>
+        <div class="bio">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <h1>Email</h1>
+            <p>dimasaw570@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-cont">
+        <h1>
+          "Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia."
+        </h1>
+        <p>- Nelson Mandela</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bagian Script -->
+
+  <script src="https://kit.fontawesome.com/2994ae93a9.js" crossorigin="anonymous"></script>
+  <script type="module" src="js/auth-guard.js"></script>
+  <script type="module" src="js/logres.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>

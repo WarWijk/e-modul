@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operasi Hitung Aljabar 2 | Materi Bentuk Aljabar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="auth-pending">
+  <div class="cont">
+    <nav id="navbar">
+      <ul>
+        <li><button id="close-sidebar-btn" onclick="closeSidebar()" aria-label="Tutup menu">&times;</button></li>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="mailto:dimasaw570@gmail.com">Kontak</a></li>
+        <li class="logout-li"><a id="logout-btn" href="#">Keluar</a></li>
+      </ul>
+    </nav>
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+    <button id="open-sidebar-btn" onclick="openSidebar()" aria-label="Buka menu" aria-expanded="false"
+      aria-controls="navbar"><i class="fa-solid fa-bars"></i></button>
+
+    <main class="lesson-page">
+      <a class="lesson-back" href="materi.html">&larr; Semua Submateri</a>
+      <h1>Operasi Hitung Aljabar 2</h1>
+      <p class="lesson-intro">Gunakan sifat operasi bilangan untuk mengalikan dan membagi bentuk aljabar.</p>
+
+      <section class="lesson-content">
+        <h2>Perkalian Bentuk Aljabar</h2>
+        <p>Kalikan koefisien dengan koefisien. Jika variabelnya sama, gunakan aturan perpangkatan.</p>
+        <div class="lesson-example">
+          <strong>Contoh:</strong><br />
+          3x &times; 2x = (3 &times; 2)(x &times; x) = <strong>6x<sup>2</sup></strong>
+        </div>
+        <p>Perkalian terhadap penjumlahan dapat dikerjakan dengan sifat distributif.</p>
+        <div class="lesson-example">
+          2(x + 4) = (2 &times; x) + (2 &times; 4) = <strong>2x + 8</strong>
+        </div>
+
+        <h2>Pembagian Bentuk Aljabar</h2>
+        <p>Sederhanakan pembagian koefisien. Untuk variabel dengan basis sama, kurangkan pangkatnya.</p>
+        <div class="lesson-example">
+          12x<sup>3</sup> &divide; 4x = (12 &divide; 4)x<sup>3 - 1</sup> = <strong>3x<sup>2</sup></strong>
+        </div>
+        <p>Dalam contoh ini, x tidak boleh bernilai nol karena menjadi pembagi.</p>
+      </section>
+
+    </main>
+  </div>
+  <script src="https://kit.fontawesome.com/2994ae93a9.js" crossorigin="anonymous"></script>
+  <script type="module" src="js/auth-guard.js"></script>
+  <script type="module" src="js/logres.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>
